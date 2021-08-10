@@ -140,6 +140,14 @@ export interface TimelineProps {
   scrollable?: boolean | { scrollbar: boolean };
 
   /**
+   * Scroll selected item into view
+   * @type {boolean}
+   * @memberof TimelineProps
+   * @default true
+   */
+  scrollOnItemSelected?: boolean;
+
+  /**
    * positions the card in Horizontal mode
    *
    * @type {('TOP' | 'BOTTOM')}

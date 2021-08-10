@@ -40,6 +40,7 @@ const Timeline: React.FunctionComponent<TimelineModel> = (
     onRestartSlideshow,
     onTimelineUpdated,
     onItemSelected,
+    scrollOnItemSelected,
     slideShowEnabled,
     slideShowRunning,
     theme,
@@ -133,6 +134,10 @@ const Timeline: React.FunctionComponent<TimelineModel> = (
 
   const handleScroll = useCallback(
     (scroll: Partial<Scroll>) => {
+      if (!scrollOnItemSelected) {
+        return;
+      }
+
       const element = timelineMainRef.current;
       if (element) {
         setNewOffset(element, scroll);
