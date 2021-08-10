@@ -42,7 +42,7 @@ const TimelineControl: React.FunctionComponent<TimelineControlModel> =
                 aria-label="first"
                 aria-disabled={disableLeft}
                 aria-controls="timeline-main-wrapper"
-                tabIndex={!disableLeft ? 0 : -1}
+                // tabIndex={!disableLeft ? 0 : -1}
                 rotate={rotate ? 'TRUE' : 'FALSE'}
               >
                 <ChevronsLeftIcon />
@@ -59,7 +59,7 @@ const TimelineControl: React.FunctionComponent<TimelineControlModel> =
                 aria-label="previous"
                 aria-disabled={disableLeft}
                 aria-controls="timeline-main-wrapper"
-                tabIndex={!disableLeft ? 0 : -1}
+                // tabIndex={!disableLeft ? 0 : -1}
                 rotate={rotate ? 'TRUE' : 'FALSE'}
               >
                 <ChevronLeft />
@@ -77,7 +77,7 @@ const TimelineControl: React.FunctionComponent<TimelineControlModel> =
                 aria-disabled={disableRight}
                 aria-controls="timeline-main-wrapper"
                 rotate={rotate ? 'TRUE' : 'FALSE'}
-                tabIndex={!disableRight ? 0 : -1}
+                // tabIndex={!disableRight ? 0 : -1}
               >
                 <ChevronRightIcon />
               </TimelineNavButton>
@@ -93,7 +93,7 @@ const TimelineControl: React.FunctionComponent<TimelineControlModel> =
                 aria-label="last"
                 aria-disabled={disableRight}
                 aria-controls="timeline-main-wrapper"
-                tabIndex={!disableRight ? 0 : -1}
+                // tabIndex={!disableRight ? 0 : -1}
                 rotate={rotate ? 'TRUE' : 'FALSE'}
               >
                 <ChevronsRightIcon />
@@ -107,7 +107,7 @@ const TimelineControl: React.FunctionComponent<TimelineControlModel> =
                   theme={theme}
                   onClick={onReplay}
                   title="Play Slideshow"
-                  tabIndex={0}
+                  // tabIndex={0}
                   aria-controls="timeline-main-wrapper"
                   aria-label="Play Slideshow"
                 >

@@ -299,7 +299,7 @@ const TimelineCardContent: React.FunctionComponent<TimelineContentModel> =
               role="button"
               show={canShowMore}
               theme={theme}
-              tabIndex={0}
+              // tabIndex={0}
             >
               {<span>{showMore ? 'read less' : 'read more'}</span>}
               <ChevronIconWrapper collapsed={!showMore}>
