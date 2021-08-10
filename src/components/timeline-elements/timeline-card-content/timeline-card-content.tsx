@@ -229,7 +229,7 @@ const TimelineCardContent: React.FunctionComponent<TimelineContentModel> =
           onMouseEnter={tryHandlePauseSlideshow}
           onMouseLeave={tryHandleResumeSlideshow}
           ref={containerRef}
-          tabIndex={0}
+          // tabIndex={0}
           theme={theme}
         >
           <TimelineCardHeader>
