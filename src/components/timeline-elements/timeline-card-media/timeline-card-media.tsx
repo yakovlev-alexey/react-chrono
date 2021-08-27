@@ -82,6 +82,7 @@ const CardMedia: React.FunctionComponent<CardMediaModel> = ({
     return (
       <CardVideo
         controls
+        autoPlay={false}
         onLoadedData={handleMediaLoaded}
         onPlay={() =>
           onMediaStateChange({
