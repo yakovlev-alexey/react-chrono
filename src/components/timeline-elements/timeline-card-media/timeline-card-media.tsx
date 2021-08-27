@@ -44,13 +44,13 @@ const CardMedia: React.FunctionComponent<CardMediaModel> = ({
       return;
     }
 
-    if (active) {
-      // play the video when active
-      videoRef.current && videoRef.current.play();
-    } else {
-      // pause the video when not active
-      videoRef.current && videoRef.current.pause();
-    }
+    // if (active) {
+    //   // play the video when active
+    //   videoRef.current && videoRef.current.play();
+    // } else {
+    //   // pause the video when not active
+    //   videoRef.current && videoRef.current.pause();
+    // }
   }, [active]);
 
   const [mediaLoaded, setMediaLoaded] = useState(false);
@@ -99,7 +99,7 @@ const CardMedia: React.FunctionComponent<CardMediaModel> = ({
     return (
       <CardVideo
         controls
-        autoPlay={active}
+        // autoPlay={active}
         ref={videoRef}
         onLoadedData={handleMediaLoaded}
         onPlay={() =>
