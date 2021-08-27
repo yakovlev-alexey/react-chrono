@@ -34,24 +34,9 @@ const CardMedia: React.FunctionComponent<CardMediaModel> = ({
   hideMedia = false,
   cardHeight,
 }: CardMediaModel) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [loadFailed, setLoadFailed] = useState(false);
 
   const { mode } = useContext(GlobalContext);
-
-  useEffect(() => {
-    if (!videoRef) {
-      return;
-    }
-
-    // if (active) {
-    //   // play the video when active
-    //   videoRef.current && videoRef.current.play();
-    // } else {
-    //   // pause the video when not active
-    //   videoRef.current && videoRef.current.pause();
-    // }
-  }, [active]);
 
   const [mediaLoaded, setMediaLoaded] = useState(false);
 
@@ -85,11 +70,9 @@ const CardMedia: React.FunctionComponent<CardMediaModel> = ({
     () => (
       <IFrameVideo
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        src={`${media.source.url}${
-          active ? '?autoplay=1&enablejsapi=1' : '?enablejsapi=1'
-        }`}
+        src={`${media.source.url}${'?enablejsapi=1'}`}
       />
     ),
     [active],
@@ -99,8 +82,6 @@ const CardMedia: React.FunctionComponent<CardMediaModel> = ({
     return (
       <CardVideo
         controls
-        // autoPlay={active}
-        ref={videoRef}
         onLoadedData={handleMediaLoaded}
         onPlay={() =>
           onMediaStateChange({
